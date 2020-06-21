@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/sstc-logo.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SSTC Online Portal</title>
+</head>
+
+<body style="background-image: url('https://source.unsplash.com/P1qyEf1g0HU/1920x1080') ">
+    <div class="d-flex justify-content-center align-items-center heading"><img src="assets/img/logo/unnamed - Copy.png"
+            alt="" width="80px;" class="head">
+        <span class="head">ONLINE TEST PORTAL</span></div>
+    <div class="d-flex justify-content-center align-items-center login-container">
+
+        <form class="login-form text-center">
+            <img src="assets/img/user.png" alt="userlogo" style="width: 100px;">
+            <h2 class="mb-3 mt-2 font-weight-light text-uppercase">Signup As</h2>
+            <div class="form-group">
+                <input type="button" class="form-control rounded-pill form-control-lg btn-custom" value="Student">
+            </div>
+            <div class="form-group">
+                <input type="button" class="form-control rounded-pill form-control-lg btn-custom" value="faculties">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center footer">
+        Copyright &copy; Your Website 2020</div>
+
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+
+
+        $("#student").load("student_register.html", function (data) {
+            $("#details").html(data);
+        });
+
+
+        $("#student").click(function () {
+            $.post("student_register.html", {}, function (data) {
+                $("#details").html(data);
+            });
+        });
+        $("#faculty").click(function () {
+            $.post("faculty_register.html", {}, function (data) {
+                $("#details").html(data);
+            });
+        });
+    });
+</script>
+
+</html>
