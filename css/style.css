@@ -3,7 +3,6 @@ body{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #ffffff;
-  overflow: hidden;
 }
 
 
@@ -21,14 +20,15 @@ body{
 
 
 .login-container{
-  height: 100vh;
+  height: auto;
   width: 100%;
-  margin-top:-60PX;
+  margin-top: 20px;
    
 }
 .login-form{
   margin: auto;
   width: 370px;
+  height: auto;
   padding: 15px;
   padding-top: 5px;
   max-width: 100%;
@@ -75,9 +75,41 @@ body{
   box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
 }
 
+.btn2{
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 100px;
+  border-radius: 10px;
+  outline: none;
+  background: #723dbe;
+  border: #723dbe solid 1px;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 500;
+  min-height: 48px;
+}
+
+.btn2:focus,
+.btn2:hover,
+.btn2:active,
+.btn2:active:focus{
+  background: #54229d;
+  border: white 2px solid;
+  font-size: 18px;
+  color:#fff;
+
+
+}
+
+.btn3{
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
 .footer{
   background: #54229d;
+  margin-top:100px;
   color:#fff;
   height: 40px;
-  margin-top: -60px;
 }

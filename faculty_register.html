@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 </head>
+
 <body>
-	<div>
-		<div class="x">
-			<div class="u">Username</div>
-			<div><input type="text" class="form-control user" name=""></div>
+	<div class="signup-form text-center">
+		<div class="form-group ">
+
+			<div><input type="text" class="form-control user rounded-pill" name="" placeholder="Enter Your Name"></div>
 		</div>
-		<div class="x">
-			<div class="u">User ID</div>
-			<div><input type="text" class="form-control user" name=""></div>
+		<div class="form-group">
+
+			<div><input type="text" class="form-control user rounded-pill" name="" placeholder="User ID"></div>
 		</div>
-		<div class="x">
-			<div class="u">Branch</div>
-			<select class="form-control branch" >
+
+		<div class="form-group">
+
+			<div><input type="email" class="form-control user rounded-pill" name="" placeholder="Email"></div>
+		</div>
+
+		<div class="form-group">
+			<select class="form-control branch rounded-pill">
+				<option>Select Branch</option>
 				<option>Computer Science Engineering</option>
 				<option>Electronics and Tele-Communicatiom</option>
 				<option>Information Technology</option>
@@ -25,12 +33,14 @@
 				<option>Mechanical Engineering</option>
 			</select>
 		</div>
-		<div class="x">
-			<div class="u">Password</div>
-			<div><input type="text" class="form-control pw" name=""></div>
+		<div class="form-group">
+
+			<div><input type="password" class="form-control pw rounded-pill" name="" placeholder="Password"></div>
 		</div>
-		<div><input type="reset" class="btn btn-dark reset" value="Reset" name=""></div>
-		<div><input type="button" class="btn btn-success submit" value="Submit" name=""></div>
+		<div><input type="reset" class="btn btn-dark  reset btn3 rounded-pill" value="Reset" name="">
+			<input type="submit" class="btn btn-success submit btn3 rounded-pill" value="Submit" name=""></div>
+		<div></div>
 	</div>
 </body>
+
 </html>
