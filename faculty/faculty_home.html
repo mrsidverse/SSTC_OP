@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SSTC Online Portal</title>
+  <link rel="stylesheet" href="css/style_faculty.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/logo/sstc-logo.png" />
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="bg_shadow"></div>
+      <div class="sidebar__inner">
+        <div class="close">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="profile_info">
+          <div class="profile_img">
+            <img src="https://i.imgur.com/A1Fjq0d.png" alt="profile_img">
+          </div>
+          <div class="profile_data">
+            <p class="name">Your Name</p>
+            <p class="role">Branch</p>
+            <div class="btn">Update Profile</div>
+          </div>
+        </div>
+        <ul class="siderbar_menu">
+          <li><a href="#" id="dash" class="active">
+              <div class="icon"><i class="fas fa-laptop"></i></div>
+              <div class="title">Dashboard</div>
+            </a></li>
+          <li><a href="#">
+              <div class="icon"><i class="fas fa-plus-circle"></i></div>
+              <div class="title">New Exam</div>
+            </a></li>
+          <li><a href="#">
+              <div class="icon"><i class="fas fa-history"></i></div>
+              <div class="title">History</div>
+            </a></li>
+          <li><a href="#">
+              <div class="icon"><i class="fas fa-poll"></i></div>
+              <div class="title">Results</div>
+            </a></li>
+          <li><a href="#">
+              <div class="icon"><i class="fas fa-question-circle"></i></div>
+              <div class="title">Feedback</div>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_container">
+
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <h2 style="font-size: 30px;
+                       color:#2a58ae;
+                " id="logo">
+              SSTC Online Portal..
+            </h2>
+          </li>
+        </ul>
+        <ul class="right_bar">
+
+          <li><i class="fas fa-sign-out-alt"></i></li>
+        </ul>
+
+      </div>
+
+      <div class="container" id="container">
+
+        <div class="item">
+          <h3>Digital Elec Sem-5</h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
+          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
+          eveniet cumque quo culpa?
+        </div>
+
+        <div class="item">
+          <h3>Java Sem-3</h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
+          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
+          eveniet cumque quo culpa?
+        </div>
+
+        <div class="item">
+          <h3>Graphics Design Sem-6</h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
+          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
+          eveniet cumque quo culpa?
+        </div>
+
+        <div class="item">
+          <h3>Digital Elec Sem-5</h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
+          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
+          eveniet cumque quo culpa?
+        </div>
+
+        <div class="item">
+          <h3>Java Sem-3</h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
+          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
+          eveniet cumque quo culpa?
+        </div>
+
+        <div class="item">
+          <h3>Graphics Design Sem-6</h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
+          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
+          eveniet cumque quo culpa?
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script>
+
+    //To show and hide menu button
+    $(".hamburger .fas").click(function () {
+      $(".wrapper").addClass("active")
+    });
+
+    $(".wrapper .sidebar .close").click(function () {
+      $(".wrapper").removeClass("active")
+    });
+
+
+    //It will change the active tab on click.
+    $('.siderbar_menu li a').click(function (ev) {
+      $('.siderbar_menu li a').removeClass('active');
+      $(ev.currentTarget).addClass('active');
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
