@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>SSTC Online Portal</title>
-  <link rel="stylesheet" href="css/style_faculty.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style_faculty.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
   <link rel="icon" type="image/x-icon" href="assets/img/logo/sstc-logo.png" />
 </head>
 
@@ -21,7 +27,7 @@
         </div>
         <div class="profile_info">
           <div class="profile_img">
-            <img src="https://i.imgur.com/A1Fjq0d.png" alt="profile_img">
+            <img src="assets/img/avatar.png" alt="profile_img" />
           </div>
           <div class="profile_data">
             <p class="name">Your Name</p>
@@ -30,32 +36,34 @@
           </div>
         </div>
         <ul class="siderbar_menu">
-          <li><a href="#" id="dash" class="active">
+          <li>
+            <a href="#" id="dashbtn" class="active" onclick="dashboard()">
               <div class="icon"><i class="fas fa-laptop"></i></div>
               <div class="title">Dashboard</div>
-            </a></li>
-          <li><a href="#">
+            </a>
+          </li>
+          <li>
+            <a href="#" id="new_testbtn" onclick="new_test()">
               <div class="icon"><i class="fas fa-plus-circle"></i></div>
               <div class="title">New Exam</div>
-            </a></li>
-          <li><a href="#">
-              <div class="icon"><i class="fas fa-history"></i></div>
-              <div class="title">History</div>
-            </a></li>
-          <li><a href="#">
+            </a>
+          </li>
+          <li>
+            <a href="#" id="resultsbtn" onclick="results()">
               <div class="icon"><i class="fas fa-poll"></i></div>
               <div class="title">Results</div>
-            </a></li>
-          <li><a href="#">
+            </a>
+          </li>
+          <li>
+            <a href="#" id="feedbackbtn" onclick="feedback()">
               <div class="icon"><i class="fas fa-question-circle"></i></div>
               <div class="title">Feedback</div>
-            </a></li>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="main_container">
-
-
       <div class="top_navbar">
         <div class="hamburger">
           <div class="hamburger__inner">
@@ -64,94 +72,311 @@
         </div>
         <ul>
           <li>
-            <h2 style="font-size: 30px;
-                       color:#2a58ae;
-                " id="logo">
+            <h2 id="logo">
               SSTC Online Portal..
             </h2>
           </li>
         </ul>
         <ul class="right_bar">
-
           <li><i class="fas fa-sign-out-alt"></i></li>
         </ul>
-
       </div>
 
       <div class="container" id="container">
+        <!-- ==========================================
+         DATA WILL BE LOADED HERE.
+         ========================================== -->
+        <div id="dashboard">
+          <div class="item">
+            <h3>Java Sem-5</h3>
+            <h5>Date 10-5-20 <span>Time: 3:35 PM</span></h5>
+            <hr id="item_ruler">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque nemo quaerat vel iure quam repudiandae tempora velit
+              sed ducimus obcaecati eum hic dignissimos porro, accusantium at
+              corrupti dolor aut non suscipit eveniet cumque quo culpa?Lorem, ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Doloremque nemo quaerat vel iure quam repudiandae tempora velit
+              sed ducimus obcaecati eum hic dignissimos porro, accusantium at
+              corrupti dolor aut. </p>
+            <!-- <div><i class="fa fa-arrow-down"></i></div> -->
 
-        <div class="item">
-          <h3>Digital Elec Sem-5</h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
-          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
-          eveniet cumque quo culpa?
+            <div id="show"><button class="btn-show">Show<img src="../assets/img/down-arrow.svg" alt=""
+                  id="read-more"></button> </div>
+
+            <div class="dashboard-details">
+              <hr>
+              <h4 class="text-center text" style="font-weight: 700;">Question Paper</h4>
+              <table style="width:100%">
+
+                <tr>
+                  <th>College- S1</th>
+                  <th>Branch- CSE</th>
+                  <th>Semester- 5th</th>
+                  <th>Section- A</th>
+                </tr>
+                <tr>
+                  <th>Subject- ADA</th>
+                  <th>Total Question- 30</th>
+                  <th>Test type- Objective</th>
+                  <th>Duration- 30 Mins</th>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <div class="dash-questions">
+                      <p>
+                        <h4>Question-1</h4>
+                        Doloremque nemo quaerat vel iure quam repudiandae tempora velit
+                        sed ducimus obcaecati eum hic dignissimos porro, accusantium at
+                        corrupti dolor aut.Doloremque nemo quaerat vel iure quam repudiandae tempora velit
+                        sed ducimus obcaecati eum hic dignissimos porro, accusantium at
+                        corrupti dolor aut.
+                        <ol>
+                          <li>Option</li>
+                          <li>Option</li>
+                          <li>Option</li>
+                          <li>Option</li>
+                        </ol>
+                      </p>
+
+                    </div>
+
+                  </td>
+
+              </table>
+            </div>
+          </div>
+
         </div>
 
-        <div class="item">
-          <h3>Java Sem-3</h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
-          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
-          eveniet cumque quo culpa?
+        <div id="new_test">
+          <div class="login-container">
+
+            <form class="new-form-test text-center" action="add_ques.html">
+              <br>
+              <i class=" fa fa-plus fa-3x text-center" style="color:darkslategrey;"></i>
+              <h2 class="mb-3 mt-2 font-weight-light text-uppercase text-center "
+                style=" font-family: 'Poppins', sans-serif;">Upload New</h2>
+
+              <div class="form-group ">
+
+                <div><input type="text" class="form-control1 " name="" placeholder="Enter Test Name"></div>
+              </div>
+
+              <div class="form-group">
+                <div>
+                  <textarea rows="4" name="" id="" class="form-control1" placeholder="Description"
+                    style="padding-top: 5px; margin-bottom: 0px;"></textarea>
+                </div>
+              </div>
+
+              <div id="left">
+                <div class="form-group ">
+                  <select class="form-control2 sem ">
+                    <option>College</option>
+                    <option>S-1</option>
+                    <option>S-2</option>
+                    <option>S-3</option>
+
+                  </select>
+                </div>
+
+                <div class="form-group ">
+                  <select class="form-control2 ">
+                    <option>Semester</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control2 " name="" placeholder="Subject">
+                </div>
+              </div>
+
+              <div id="right">
+                <div class="form-group ">
+                  <select class="form-control2 sem">
+                    <option>Select Branch</option>
+                    <option>Computer Science Engineering</option>
+                    <option>Electronics and Tele-Communicatiom</option>
+                    <option>Information Technology</option>
+                    <option>Electrical and Electronics Engineering</option>
+                    <option>Electrical engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Mechanical Engineering</option>
+                  </select>
+                </div>
+
+                <div class="form-group ">
+                  <select class="form-control2 sem ">
+                    <option>Section</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+
+                  </select>
+                </div>
+
+                <div class="form-group ">
+                  <input type="text" class=" form-control2" name="" placeholder="Total Questions">
+
+                </div>
+
+
+              </div>
+              <hr id="clrFloat">
+
+              <div class="form-group">
+                <input type="time" class=" form-control2 " name="" placeholder="Duration">
+              </div>
+
+
+              <div class="form-group ">
+                <select class="form-control1  ">
+                  <option>Test type</option>
+                  <option value="objective">Objective</option>
+                  <option value="subjective">Subjective</option>
+                </select>
+              </div>
+
+              <div>
+                <br>
+                <input type="reset" class="btn btn-dark  reset btn3 rounded-pill" value="Reset" name="">
+                <input type="submit" class="btn btn-success submit btn3 rounded-pill" value="Submit" name=""></div>
+
+            </form>
+          </div>
+
         </div>
 
-        <div class="item">
-          <h3>Graphics Design Sem-6</h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
-          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
-          eveniet cumque quo culpa?
-        </div>
+        <!-- <div id="results">
+          <div class="item">
+            <h3>Results</h3>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque nemo quaerat vel iure quam repudiandae tempora velit
+            sed ducimus obcaecati eum hic dignissimos porro, accusantium at
+            corrupti dolor aut non suscipit eveniet cumque quo culpa?
+          </div>
+        </div> -->
 
-        <div class="item">
-          <h3>Digital Elec Sem-5</h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
-          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
-          eveniet cumque quo culpa?
+        <div id="feedback">
+          <div class="item">
+            <h3>Aman Verma</h3>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque nemo quaerat vel iure quam repudiandae tempora velit
+            sed ducimus obcaecati eum hic dignissimos porro, accusantium at
+            corrupti dolor aut non suscipit eveniet cumque quo culpa?
+          </div>
         </div>
-
-        <div class="item">
-          <h3>Java Sem-3</h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
-          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
-          eveniet cumque quo culpa?
-        </div>
-
-        <div class="item">
-          <h3>Graphics Design Sem-6</h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo quaerat vel iure quam repudiandae
-          tempora velit sed ducimus obcaecati eum hic dignissimos porro, accusantium at corrupti dolor aut non suscipit
-          eveniet cumque quo culpa?
-        </div>
-
 
       </div>
-
     </div>
   </div>
 
   <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-  <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+</body>
+
+<script>
+  $(document).ready(function () {
+
+    $("#dashboard").show();
+    $("#new_test").hide();
+    $("#results").hide();
+    $("#feedback").hide();
 
     //To show and hide menu button
     $(".hamburger .fas").click(function () {
-      $(".wrapper").addClass("active")
+      $(".wrapper").addClass("active");
     });
 
     $(".wrapper .sidebar .close").click(function () {
-      $(".wrapper").removeClass("active")
+      $(".wrapper").removeClass("active");
     });
+
+    // $('body').click(function () {
+    //   $('.wrapper').removeClass('active');
+    // });
 
 
     //It will change the active tab on click.
-    $('.siderbar_menu li a').click(function (ev) {
-      $('.siderbar_menu li a').removeClass('active');
-      $(ev.currentTarget).addClass('active');
+    $(".siderbar_menu li a").click(function (ev) {
+      $(".siderbar_menu li a").removeClass("active");
+      $(ev.currentTarget).addClass("active");
+    });
+  });
+
+  //-----To load container data--------------------------------------------
+
+  //for dash
+  function dashboard() {
+    $("#dashbtn").click(function () {
+      $(".wrapper").removeClass("active");
+      $("#dashboard").show();
+      $("#new_test").hide();
+      $("#results").hide();
+      $("#feedback").hide();
+    });
+  }
+
+  //for new test
+  function new_test() {
+    $("#new_testbtn").click(function () {
+      $(".wrapper").removeClass("active");
+      $("#dashboard").hide();
+      $("#new_test").show();
+      $("#results").hide();
+      $("#feedback").hide();
+    });
+  }
+
+  //for Results
+  function results() {
+    $(".wrapper").removeClass("active");
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
+        document.getElementById("container").innerHTML = xhttp.responseText;
+      }
+    };
+    xhttp.open("GET", "result.html", true);
+    xhttp.send();
+  };
+
+  // function results() {
+  //   $("#resultsbtn").click(function () {
+  //     $(".wrapper").removeClass("active");
+  //     $("#dashboard").hide();
+  //     $("#new_test").hide();
+  //     $("#results").show();
+  //     $("#feedback").hide();
+  //   });
+  // }
+
+  //for Feedback
+  function feedback() {
+    $("#feedbackbtn").click(function () {
+      $(".wrapper").removeClass("active");
+      $("#dashboard").hide();
+      $("#new_test").hide();
+      $("#results").hide();
+      $("#feedback").show();
+
     });
 
 
-
-
-  </script>
-</body>
+  }
+</script>
 
 </html>

@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!-- required files for duration picker -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/flick/jquery-ui.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/2.2.2/moment-duration-format.min.js"></script>
+</head>
+
+<body>
+    <div>
+        Duration (Hours : Min) <br>
+        <input type="text" name="text" value="time" class="example">
+    </div>
+
+
+    <!-- this is main function -->
+    <script>
+        !function ($) { $.widget("ui.durationspinner", $.ui.spinner, { options: { min: 0, step: 60, page: 60, format: "hh:mm" }, _parse: function (value) { if ("string" != typeof value) return value; if (Number(value) == value) return Number(value); for (var time = value.split(/[^\d]+/), fmt = this.options.format.replace(/\[.*\]/g, "").split(/[^dhms]+/), seconds = 0, i = 0; i < fmt.length; i++)fmt[i].match(/[d]/) ? seconds += 24 * Number(time[i]) * 3600 : fmt[i].match(/[h]/) ? seconds += 3600 * Number(time[i]) : fmt[i].match(/[m]/) ? seconds += 60 * Number(time[i]) : fmt[i].match(/[s]/) && (seconds += Number(time[i])); return seconds }, _format: function (value) { return moment.duration(value, "seconds").format(this.options.format, { trim: !1 }) } }) }(jQuery);
+    </script>
+
+    <!-- function to customise picker -->
+    <script>
+        $(function () {
+            $('input.example').durationspinner();
+        });
+        $(function () {
+
+            $('input.example').durationspinner({
+                format: 'hh:mm'
+            });
+
+        });
+        $('input.example').timespinner({
+            step: 30
+        });
+
+    </script>
+
+</body>
+
+</html>

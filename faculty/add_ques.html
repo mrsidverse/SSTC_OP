@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/x-icon" href="/static/assets/img/logo/sstc-logo.png" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style_addques.css">
+	<title>SSTC Online Portal</title>
+
+</head>
+
+<body>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<div class="main">
+		<div class="header">
+			<div class="header-content" id="backbtn"><span><i class="fa fa-arrow-left" style="color: #3958E4;"></i>
+				</span><span><a href="">
+						Back</a></span>
+			</div>
+			<div class=" header-content" id="title">
+				<h3 class="text-center text-uppercase head-title">Add Questions</h3>
+			</div>
+			<div class="header-content" id="homebtn"><span><i class="fas fa-home " style="color: #3958E4;"></i>
+				</span><span><a href="faculty_home.html">
+						Home</a></span> </div>
+			<hr id="clrfloat">
+		</div>
+
+		<div class="test-details">
+			<table style="width:100%">
+
+				<tr>
+					<th>College- S1</th>
+					<th>Branch- CSE</th>
+					<th>Semester- 5th</th>
+					<th>Section- A</th>
+				</tr>
+				<tr>
+					<th>Subject- ADA</th>
+					<th>Total Question- 30</th>
+					<th>Test type- Objective</th>
+					<th>Duration- 30 Mins</th>
+				</tr>
+
+			</table>
+		</div>
+
+		<!-- Objective type============================================== -->
+		<form class=" text-center">
+
+			<div class="ques-group">
+				<!-- {%for i in range(1,ques+1) %} -->
+				<br>
+				<div class="left form-group">
+					<h4 id='h1quizform'>Question-{{i}}</h4>
+					<textarea name="" id="" class="text-area" placeholder="Write the question here."></textarea>
+				</div>
+
+				<div class="right form-group text-center">
+					<h4>Options</h4>
+					<div class="form-group">
+						<input type='text' placeholder='Option 1' class="form-control">
+					</div>
+
+					<div class="form-group">
+						<input type='text' placeholder='Option 2' class="form-control">
+					</div>
+
+					<div class="form-group">
+						<input type='text' placeholder='Option 3' class="form-control">
+					</div>
+
+					<div class="form-group">
+						<input type='text' placeholder='Option 4' class="form-control">
+					</div>
+
+					<div class="form-group">
+						<input type='text' placeholder='Answer: 1/2/3/4 ?' class="form-control">
+					</div>
+
+				</div>
+
+				<hr id="clrfloat">
+				<!-- <hr id="separator"> -->
+			</div>
+
+			<!-- {% endfor %} -->
+
+
+			<!-- Subbjective type============================================== -->
+			<!-- <div class="subj">
+				<hr id="separator">
+				<div class="form-group">
+					<h4>Question-1</h4>
+					<textarea name="" id="" class="text-area" placeholder="Write the question here."></textarea>
+				</div>
+			</div> -->
+
+			<!-- Form Buttons================================================ -->
+			<div id="ques-btn">
+				<br>
+
+				<input type="reset" class="btn btn-dark  reset btn3 rounded-pill" value="Reset" name="">
+				<input type="submit" class="btn btn-success submit btn3 rounded-pill" value="Submit" name="">
+
+			</div>
+
+		</form>
+	</div>
+
+	</div>
+	</div>
+</body>
+
+</html>

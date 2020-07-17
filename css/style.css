@@ -22,7 +22,7 @@ body{
 .login-container{
   height: auto;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
    
 }
 .login-form{
@@ -109,7 +109,7 @@ body{
 
 .footer{
   background: #54229d;
-  margin-top:100px;
+  margin-top:200px;
   color:#fff;
   height: 40px;
 }
